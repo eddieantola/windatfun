@@ -404,6 +404,13 @@ header nav a:hover::after {
         left: auto;
         background: linear-gradient(to left, #121212 5%, transparent);
     }
+
+    .scroll-animation {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        /*transition-delay: 0.2s;*/
+    }
 }
 /* Stili per l'header quando la pagina è scrollata */
 header.header-scrolled {
