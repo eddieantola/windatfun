@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 2. PREPARAZIONE PER LO SCORRIMENTO INFINITO DELLE RIGHE DI IMMAGINI ---
     const scrollingRows = document.querySelectorAll('.scrolling-row');
     scrollingRows.forEach(row => {
-        // Duplica tutto il contenuto della riga per creare un loop senza interruzioni
         const content = row.innerHTML;
-        row.innerHTML += content;
+        // MODIFICA: Duplica il contenuto 2 volte invece di 1
+        row.innerHTML += content + content;
     });
 
 
