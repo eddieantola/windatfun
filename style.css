@@ -140,8 +140,9 @@ header nav a:hover::after {
 
 .scroll-animation {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(80px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    /*transition-delay: 0.2s;*/
 }
 
 .scroll-animation.visible {
