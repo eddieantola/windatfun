@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollingRows = document.querySelectorAll('.scrolling-row');
     scrollingRows.forEach(row => {
         const content = row.innerHTML;
-        // MODIFICA: Duplica il contenuto 2 volte invece di 1
         row.innerHTML += content + content;
     });
 
