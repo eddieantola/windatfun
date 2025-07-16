@@ -251,7 +251,7 @@ header nav a:hover::after {
 
 /* Modifiche per schermi più larghi di 16:9 */
 @media (min-aspect-ratio: 16/9) {
-    /* La sezione contatti occupa tutta la larghezza */
+
     #contatti.content-section {
         max-width: 100%;
     }
@@ -320,15 +320,15 @@ header nav a:hover::after {
     /* ----- Header Iniziale su Mobile ----- */
     header {
         padding: 15px;
-        flex-direction: row; /* Mantiene logo e nav in riga */
+        flex-direction: row;
         justify-content: space-between;
     }
 
     header.header-scrolled {
-        padding: 10px 15px; /* Padding ridotto per header scrollato */
+        padding: 10px 15px;
     }
 
-    /* Nasconde la navigazione testuale e mostra un futuro hamburger menu */
+
     header nav {
         display: none;
     }
@@ -341,7 +341,6 @@ header nav a:hover::after {
         font-size: 1.2em;
     }
 
-    /* ----- Sezioni di Contenuto su Mobile ----- */
     .hero-text h1 {
         font-size: 2.2rem;
     }
@@ -350,7 +349,7 @@ header nav a:hover::after {
         font-size: 2rem;
     }
 
-    /* ----- Layout Sezioni Divise su Mobile ----- */
+
     .split-layout-container {
         flex-direction: column;
     }
@@ -372,11 +371,8 @@ header nav a:hover::after {
         text-align: center;
     }
 
-    /* ----- NUOVE REGOLE PER IMMAGINI SCORREVOLI SU MOBILE ----- */
-
     .content-section.split-section {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding: 40px 15px;
     }
 
     .scrolling-row img {
