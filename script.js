@@ -61,3 +61,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+//gestione header dinamico per disp mobile
+
+const header = document.querySelector('header');
+const heroSection = document.getElementById('hero');
+
+window.addEventListener('scroll', () => {
+    // Aggiunge la classe .header-scrolled quando si scorre oltre la sezione hero
+    if (window.scrollY > heroSection.offsetHeight) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled');
+    }
+});

@@ -317,28 +317,40 @@ header nav a:hover::after {
 
 /*----- MEDIA QUERY (STILI RESPONSIVE) -----*/
 @media (max-width: 768px) {
+    /* ----- Header Iniziale su Mobile ----- */
     header {
-        padding: 20px;
-        flex-direction: column;
-        background: rgba(0,0,0,0.5);
+        padding: 15px;
+        flex-direction: row; /* Mantiene logo e nav in riga */
+        justify-content: space-between;
     }
 
+    header.header-scrolled {
+        padding: 10px 15px; /* Padding ridotto per header scrollato */
+    }
+
+    /* Nasconde la navigazione testuale e mostra un futuro hamburger menu */
     header nav {
-        margin-top: 10px;
+        display: none;
     }
 
-    header nav a {
-        margin: 0 10px;
+    .logo_group .logo img {
+        height: 50px;
     }
 
+    header .logo_text {
+        font-size: 1.2em;
+    }
+
+    /* ----- Sezioni di Contenuto su Mobile ----- */
     .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .content-section h2 {
         font-size: 2.2rem;
     }
 
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    /* ----- Layout Sezioni Divise su Mobile ----- */
     .split-layout-container {
         flex-direction: column;
     }
@@ -353,6 +365,63 @@ header nav a:hover::after {
     }
 
     .text-content {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        text-align: center;
     }
+    .layout-text-right .text-content {
+        text-align: center;
+    }
+
+    /* ----- NUOVE REGOLE PER IMMAGINI SCORREVOLI SU MOBILE ----- */
+
+    .content-section.split-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .scrolling-row img {
+        height: 200px;
+    }
+
+    /* SFUMATURA A ENTRAMBI I LATI */
+    .image-content::before,
+    .image-content::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        width: 35px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .image-content::before {
+        left: 0;
+        background: linear-gradient(to right, #121212 5%, transparent);
+    }
+
+
+    .split-section .image-content::after {
+        right: 0;
+        left: auto;
+        background: linear-gradient(to left, #121212 5%, transparent);
+    }
+}
+/* Stili per l'header quando la pagina è scrollata */
+header.header-scrolled {
+    background: #121212;
+    padding: 10px 50px;
+}
+
+header.header-scrolled .logo img {
+    height: 40px;
+}
+
+header.header-scrolled .logo_text {
+    font-size: 1.5em;
+}
+
+header.header-scrolled nav {
+    display: none;
 }
